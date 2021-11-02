@@ -1,0 +1,12 @@
+{
+	"name": "com.hjelmqvist.collections",
+	"version": "1.0.0",
+	"displayName": "Hjelmqvist Collections",
+	"description": "Library of custom collections",
+	"unity": "2020.3",
+	"author": {
+		"name": "Mathias Hjelmqvist",
+		"email": "mathias.hjelmqvist@gmail.com",
+		"url": ""
+	}
+}
