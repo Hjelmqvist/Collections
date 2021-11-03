@@ -12,10 +12,10 @@ namespace Hjelmqvist.Collections.Generic
             Value = value;
         }
 
-        public void SetNext(LinkedListNode<T> node) => Next = node;
-        public void SetPrevious(LinkedListNode<T> node) => Previous = node;
+        internal void SetNext(LinkedListNode<T> node) => Next = node;
+        internal void SetPrevious(LinkedListNode<T> node) => Previous = node;
 
-        public void SetReferences(LinkedListNode<T> next, LinkedListNode<T> previous, LinkedList<T> list)
+        internal void SetReferences(LinkedListNode<T> next, LinkedListNode<T> previous, LinkedList<T> list)
         {
             Next = next;
             Previous = previous;

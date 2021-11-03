@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 
 namespace Hjelmqvist.Collections.Generic
 {
-    public class LinkedList<T> : ICollection, ICollection<T>, IEnumerable<T> , IReadOnlyCollection<T>//, ISerializable, IDeserializationCallback
+    public class LinkedList<T> : ICollection, ICollection<T>, IEnumerable<T>, IReadOnlyCollection<T>//, ISerializable, IDeserializationCallback
     {
         public LinkedListNode<T> First { get; private set; }
         public LinkedListNode<T> Last { get; private set; }
@@ -52,7 +52,7 @@ namespace Hjelmqvist.Collections.Generic
             }
             set
             {
-                if( index < 0 || index >= Count )
+                if (index < 0 || index >= Count)
                     throw new IndexOutOfRangeException();
                 var node = First;
                 int count = 0;
@@ -160,7 +160,7 @@ namespace Hjelmqvist.Collections.Generic
             // :thinking:
             First = null;
             Last = null;
-            Count = 0; 
+            Count = 0;
         }
 
         public bool Contains(T value)
@@ -196,7 +196,7 @@ namespace Hjelmqvist.Collections.Generic
                 newArray[i + j] = target[i];
             }
             target = newArray;
-        } 
+        }
 
         public void CopyTo(T[] target, int index)
         {
@@ -218,7 +218,7 @@ namespace Hjelmqvist.Collections.Generic
             {
                 if (current != null)
                 {
-                    array.SetValue(current.Value, i);
+                    array.SetValue( current.Value, i );
                     current = current.Next;
                 }
             }
@@ -263,7 +263,7 @@ namespace Hjelmqvist.Collections.Generic
                 count++;
             }
             return -1;
-        } 
+        }
 
         public void Remove(LinkedListNode<T> node)
         {
@@ -271,12 +271,12 @@ namespace Hjelmqvist.Collections.Generic
             {
                 RemoveFirst();
                 return;
-            }      
+            }
             else if (node == Last)
             {
                 RemoveLast();
                 return;
-            }     
+            }
 
             var previous = First;
             var current = First;
@@ -324,16 +324,16 @@ namespace Hjelmqvist.Collections.Generic
 
         public void RemoveAt(int index) // bonus
         {
-            if (index == 0) 
+            if (index == 0)
             {
                 RemoveFirst();
                 return;
-            }    
+            }
             else if (index == Count - 1)
             {
                 RemoveLast();
                 return;
-            }      
+            }
 
             var previous = First;
             var current = First;
@@ -351,7 +351,7 @@ namespace Hjelmqvist.Collections.Generic
                 current = current.Next;
                 count++;
             }
-        } 
+        }
 
         public void RemoveFirst()
         {
